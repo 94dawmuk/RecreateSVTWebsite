@@ -1,0 +1,81 @@
+footer {
+    background-color: #0b0b;
+    color: white;
+    padding: 40px;
+    font-family: Aria, sans-serif;
+}
+
+/*Top Del*/
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/*Logo*/
+.footer-long h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.footer-logo p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Kolummner*/
+.footer-columns{
+    display:flex;
+    gap: 50px;
+}
+
+.col a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration:none;
+    color: white;
+}
+
+.col a:hover{
+    text-decoration: underline;
+}
+/*Bottom*/
+.footer-bottom{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Knappar*/
+.footer-bottom button {
+    background-color: #2a2a2a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.footer-bottom button:hover{
+    background-color: #444;
+}
+
+/*Responsiv*/
+@media (max-width: 768px){
+    .footer-top{
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-columns{
+        flex-direction: column;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+        gamp: 15px;
+        align-items: flex-start;
+    }
+
+}
