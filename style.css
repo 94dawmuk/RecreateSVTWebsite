@@ -1,5 +1,5 @@
 footer {
-    background-color: #0b0b;
+    background-color: #0b0b0b;
     color: white;
     padding: 40px;
     font-family: Aria, sans-serif;
@@ -13,7 +13,7 @@ footer {
 }
 
 /*Logo*/
-.footer-long h1 {
+.footer-long-logo h1 {
     font-size: 32px;
     margin-bottom: 5px;
 }
@@ -26,7 +26,7 @@ footer {
 /* Kolummner*/
 .footer-columns{
     display:flex;
-    gap: 50px;
+    gap: 40px;
 }
 
 .col a {
@@ -48,7 +48,7 @@ footer {
 }
 
 /*Knappar*/
-.footer-bottom button {
+.footer-buttons button {
     background-color: #2a2a2a;
     color: white;
     border: none;
@@ -57,7 +57,7 @@ footer {
     margin-left: 10px;
     cursor: pointer;
 }
-.footer-bottom button:hover{
+.footer-buttons button:hover{
     background-color: #444;
 }
 
@@ -74,7 +74,7 @@ footer {
 
     .footer-bottom{
         flex-direction: column;
-        gamp: 15px;
+        gap: 15px;
         align-items: flex-start;
     }
 
