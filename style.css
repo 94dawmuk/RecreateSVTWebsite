@@ -1,7 +1,85 @@
+<!--Rest och grundstil-->
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #141414;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+<!--Header-->
+
+header{
+    background-color: #0b0b0b;
+    padding: 0 40px;
+    border-bottom: 1px solid #2a2a2a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header-inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-logo{
+    display:flex;
+    align-items: baseline;
+    gap: 2px;
+}
+.logo-text{
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+    text-transform: lowercase;
+    letter-spacing: -1px;
+}
+.logo-sub{
+    font-size: 14px;
+    color: #e30613;
+    font-weight: 700;
+    text-transform: lowercase;
+}
+.header-nav{
+    display: flex;
+    gap: 30px;
+}
+.header-nav a{
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;;
+}
+.header-nav a:hover{
+    color: white;
+}
+.header-icons{
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    color: #ccc;
+    cursor: pointer;
+}
+.header-icons i:hover{
+    color: white;
+}
+
+<!--Main-->
 main{
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
+}
+main h2{
+    font-size: 20px;
+    margin: 20px;
+    font-weight: 700;
 }
 
 /*Live now(CARDS)*/
@@ -12,16 +90,18 @@ main{
 }
 .channel-card{
     width: 180px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 .channel-card:hover{
-    transform: scale(1.03);
-    transition: 0.2s;
+    transform: scale(1.05);
 }
 .card-thumb{
     position: relative;
-    height: 100px;
+    height: 105px;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 6px;
+    background-color: #2a2a2a;
 }
 .card-thumb img{
     width: 100%;
@@ -39,7 +119,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 24px;
     color: white;
 }
 .card-channel{
