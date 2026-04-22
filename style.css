@@ -1,119 +1,109 @@
-<!--Rest och grundstil-->
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+    margin: 0;
 }
-body{
+
+body {
+
     background-color: #141414;
     color: #f0f0f0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-<!--Header-->
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 0.1rem;
+    gap: 0.1rem;
+    background: black;
 
-header{
-    background-color: #0b0b0b;
-    padding: 0 40px;
-    border-bottom: 1px solid #2a2a2a;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
-.header-inner{
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 60px;
+
+.tv-tabla {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-.header-logo{
-    display:flex;
-    align-items: baseline;
-    gap: 2px;
-}
-.logo-text{
-    font-size: 28px;
-    font-weight: 900;
-    color: white;
-    text-transform: lowercase;
-    letter-spacing: -1px;
-}
-.logo-sub{
-    font-size: 14px;
-    color: #e30613;
-    font-weight: 700;
-    text-transform: lowercase;
-}
-.header-nav{
-    display: flex;
-    gap: 30px;
-}
-.header-nav a{
-    color: #ccc;
-    text-decoration: none;
-    font-size: 15px;
-    transition: color 0.2s;;
-}
-.header-nav a:hover{
-    color: white;
-}
-.header-icons{
-    display: flex;
-    gap: 20px;
-    font-size: 18px;
-    color: #ccc;
-    cursor: pointer;
-}
-.header-icons i:hover{
-    color: white;
+    align-items: center;
+
 }
 
-<!--Main-->
-main{
-    padding: 40px;
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.btn {
+    display: inline-flex;
+    background: rgb(0, 0, 0);
+    color: rgb(251, 250, 250);
+    border: none;
+    font-size: 1.1rem;
+    font-family: 'Arial', sans-serif;
+    align-items: center;
+
+
+}
+
+.SvtPicture {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+
+}
+
+
+main {
+    padding: 1rem;
+    gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
-main h2{
-    font-size: 20px;
-    margin: 20px;
-    font-weight: 700;
+
+main h1 {
+    font-size: 40px;
+    padding: 1rem;
 }
 
 /*Live now(CARDS)*/
-.channel-cards{
+.channel-cards {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
 }
-.channel-card{
+
+.channel-card {
     width: 180px;
     cursor: pointer;
     transition: 0.2s;
 }
-.channel-card:hover{
+
+.channel-card:hover {
     transform: scale(1.05);
 }
-.card-thumb{
+
+.card-thumb {
     position: relative;
     height: 105px;
     overflow: hidden;
     border-radius: 6px;
     background-color: #2a2a2a;
 }
-.card-thumb img{
+
+.card-thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.card-overlay{
+
+.card-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0, 0, 0, 0.25);
 }
-.card-play{
+
+.card-play {
     position: absolute;
     inset: 0;
     display: flex;
@@ -122,34 +112,48 @@ main h2{
     font-size: 24px;
     color: white;
 }
-.card-channel{
+
+.card-channel {
     font-size: 12px;
     color: #aaa;
     margin-top: 5px;
 }
-.card-title{
+
+.card-title {
     font-size: 14px;
 }
 
 /*Schedule*/
-.schedule{
+.schedule {
     margin-top: 40px;
 }
-.program{
+
+.program {
     display: flex;
     gap: 15px;
     margin-bottom: 15px;
 }
-.time{
+
+.time {
     width: 60px;
     color: #aaa;
 }
-.prog-title{
+
+.prog-title {
     font-weight: bold;
 }
-.prog-sub{
+
+.prog-sub {
     font-size: 13px;
     color: #bbb;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
 }
 
 /*Footer*/
@@ -161,7 +165,7 @@ footer {
 }
 
 /*Top Del*/
-.footer-top{
+.footer-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -179,33 +183,35 @@ footer {
 }
 
 /* Kolummner*/
-.footer-columns{
-    display:flex;
+.footer-columns {
+    display: flex;
     gap: 40px;
 }
 
 .col a {
     display: block;
     margin-bottom: 10px;
-    text-decoration:none;
+    text-decoration: none;
     color: white;
 }
 
-.col a:hover{
+.col a:hover {
     text-decoration: underline;
 }
+
 /*Bottom*/
-.footer-bottom{
+.footer-bottom {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
+
 /*Buttons*/
-.footer-buttons{
+.footer-buttons {
     display: flex;
-    gap:10px;
+    gap: 10px;
 }
 
 /*Knappar*/
@@ -217,22 +223,23 @@ footer {
     border-radius: 20px;
     cursor: pointer;
 }
-.footer-buttons button:hover{
+
+.footer-buttons button:hover {
     background-color: #444;
 }
 
 /*Responsiv*/
-@media (max-width: 768px){
-    .footer-top{
+@media (max-width: 768px) {
+    .footer-top {
         flex-direction: column;
         gap: 20px;
     }
-    
-    .footer-columns{
+
+    .footer-columns {
         flex-direction: column;
     }
 
-    .footer-bottom{
+    .footer-bottom {
         flex-direction: column;
         gap: 15px;
         align-items: flex-start;
