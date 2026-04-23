@@ -1,58 +1,74 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-
     background-color: #141414;
     color: #f0f0f0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
 }
 
+/* ===== HEADER ===== */
 header {
     display: flex;
     align-items: center;
     padding: 0 20px;
+    background: black;
     height: 65px;
     gap: 15px;
     position: sticky;
-    background: black;
     top: 0;
     z-index: 100;
-
 }
-.header-nav{
+
+.header-nav {
     display: flex;
-    gap:5px;
+    align-items: center;
+    gap: 5px;
     flex: 1;
 }
 
-.header-right{
-    margin-left:auto;
+.header-right {
+    margin-left: auto;
     display: flex;
-    gap:5px;
+    align-items: center;
+    gap: 5px;
 }
 
-.hamburger{
+.hamburger {
     display: none;
-    background:black;
-    border:none;
+    background: black;
+    border: none;
     color: white;
     cursor: pointer;
     font-size: 1.5rem;
     padding: 5px;
 }
 
-.logo-btn{
+.logo-btn {
     padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-
-.tv-tabla {
-    display: flex;
-    justify-content: space-between;
+.btn {
+    display: inline-flex;
     align-items: center;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    white-space: nowrap;
+    padding: 5px 8px;
+}
 
+.btn:hover {
+    color: #ddd;
 }
 
 .material-symbols-outlined {
@@ -60,33 +76,21 @@ header {
         'FILL' 0,
         'wght' 400,
         'GRAD' 0,
-        'opsz' 24
+        'opsz' 24;
 }
 
-.btn {
-    display: inline-flex;
-    background: rgb(0, 0, 0);
-    color: rgb(251, 250, 250);
-    border: none;
-    font-size: 1.1rem;
-    font-family: 'Arial', sans-serif;
-    align-items: center;
-
-
-}
-
-.SvtPicture {
+/* ===== TV-TABLÅ ===== */
+.tv-tabla {
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1rem;
-
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    padding: 0 1rem;
 }
 
-
+/* ===== MAIN ===== */
 main {
     padding: 1rem;
-    gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -96,7 +100,7 @@ main h1 {
     padding: 1rem;
 }
 
-/*Live now(CARDS)*/
+/* ===== KORT ===== */
 .channel-cards {
     display: flex;
     gap: 15px;
@@ -153,7 +157,7 @@ main h1 {
     font-size: 14px;
 }
 
-/*Schedule*/
+/* ===== TABLÅ ===== */
 .schedule {
     margin-top: 40px;
 }
@@ -178,30 +182,22 @@ main h1 {
     color: #bbb;
 }
 
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
-/*Footer*/
+/* ===== FOOTER ===== */
 footer {
     background-color: #0b0b0b;
     color: white;
     padding: 40px;
     font-family: Arial, sans-serif;
+    margin-top: 60px;
+    border-top: 1px solid #2a2a2a;
 }
 
-/*Top Del*/
 .footer-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-/*Fix: rätt klass*/
 .footer-top-logo h1 {
     font-size: 32px;
     margin-bottom: 5px;
@@ -212,7 +208,6 @@ footer {
     font-size: 14px;
 }
 
-/* Kolummner*/
 .footer-columns {
     display: flex;
     gap: 40px;
@@ -229,7 +224,6 @@ footer {
     text-decoration: underline;
 }
 
-/*Bottom*/
 .footer-bottom {
     margin-top: 30px;
     display: flex;
@@ -238,13 +232,11 @@ footer {
     flex-wrap: wrap;
 }
 
-/*Buttons*/
 .footer-buttons {
     display: flex;
     gap: 10px;
 }
 
-/*Knappar*/
 .footer-buttons button {
     background-color: #2a2a2a;
     color: white;
@@ -258,25 +250,24 @@ footer {
     background-color: #444;
 }
 
-/*Responsiv*/
+/* ===== RESPONSIVITET ===== */
 @media (max-width: 768px) {
-    
-    /*--nytt för header--*/
-    .hamburger{
+
+    .hamburger {
         display: block;
     }
 
-    .logo-btn{
+    .logo-btn {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .header-nav{
+    .header-nav {
         display: none;
     }
 
-    .header-nav-open{
+    .header-nav.open {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -289,17 +280,16 @@ footer {
     }
 
     .logga-in-text {
-    display: none;
+        display: none;
     }
 
-    
-    .channel-cards{
+    .channel-cards {
         flex-wrap: nowrap;
         overflow-x: auto;
         scrollbar-width: none;
     }
 
-    .channel-cards::-webkit-scrollbar{
+    .channel-cards::-webkit-scrollbar {
         display: none;
     }
 
@@ -317,5 +307,4 @@ footer {
         gap: 15px;
         align-items: flex-start;
     }
-
 }

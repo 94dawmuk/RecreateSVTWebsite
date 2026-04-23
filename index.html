@@ -4,56 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>SVT Play</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-
-    <!--Font Awesome Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-    <div>
-        <!--SVT Header-->
-        <header>
-            <!--Hmburger(visas bara på mobil)-->
-            <button class="hamburger" onclick="toggleMenu()">
-            <span class="material-symbols-outlined">menu</span></button>
-            <button class="btn logo-btn">
-            <img width="100" height="50" src="Svtlogo.jpg" alt="Svtlogo">
-            </button>
-            
-            <!--Nav-länkar(gömda på mobil)-->
-            <nav class="header-nav" id="headerNAV">
-            <button class="btn ">START</button>
-            <button class="btn ">MITT SVTPLAY</button>
-            <button class="btn ">PROGRAM</button>
-            <button class="btn ">KNALLER</button>
-        </nav>
-        
-        <div class="header-right">
-        <button class="btn"><span class="material-symbols-outlined">search</span>SÖK</button>
-        <button class="btn logga-in-text">
-                <span class="material-symbols-outlined">person</span> LOGGA IN
+
+    <header>
+        <button class="hamburger" onclick="toggleMenu()">
+            <span class="material-symbols-outlined">menu</span>
         </button>
+
+        <button class="btn logo-btn">
+            <img width="100" height="50" src="Svtlogo.jpg" alt="Svtlogo">
+        </button>
+
+        <nav class="header-nav" id="headerNav">
+            <button class="btn">START</button>
+            <button class="btn">MITT SVTPLAY</button>
+            <button class="btn">PROGRAM</button>
+            <button class="btn">KANALER</button>
+        </nav>
+
+        <div class="header-right">
+            <button class="btn">
+                <span class="material-symbols-outlined">search</span> SÖK
+            </button>
+            <button class="btn logga-in-text">
+                <span class="material-symbols-outlined">person</span> LOGGA IN
+            </button>
         </div>
-        </header>
-        <script>function toggleMenu(){
-            const nav = document.getElementById("headerNAV");
-            nav.classList.toggle("open");
-        }</script>
+    </header>
 
-    </div>
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('headerNav');
+            nav.classList.toggle('open');
+        }
+    </script>
 
-    <!--Main--->
     <main>
         <h1>På SVT just nu</h1>
 
         <section class="live-now">
-
             <div class="channel-cards">
-                <!--card1-->
 
                 <div class="channel-card">
                     <div class="card-thumb film">
@@ -62,7 +58,7 @@
                     <p class="card-channel">SVT1</p>
                     <p class="card-title">Rapport</p>
                 </div>
-                <!--SVT1-CARD2-->
+
                 <div class="channel-card">
                     <div class="card-thumb news">
                         <img src="2.png" alt="SVT1 Rapport">
@@ -70,7 +66,7 @@
                     <p class="card-channel">SVT1</p>
                     <p class="card-title">Rapport</p>
                 </div>
-                <!--SVT Barn-CARD3-->
+
                 <div class="channel-card">
                     <div class="card-thumb news">
                         <img src="3.png" alt="SVT Barn">
@@ -79,16 +75,14 @@
                     <p class="card-title">SVT Barn</p>
                 </div>
 
-                <!--SVT2-CARD4-->
                 <div class="channel-card">
                     <div class="card-thumb documentary">
                         <img src="4.png" alt="Dokumentär SVT2">
-                        <p class="card-channel">SVT2</p>
                     </div>
+                    <p class="card-channel">SVT2</p>
                     <p class="card-title">Dokumentär</p>
                 </div>
 
-                <!--SVT24-CARD5-->
                 <div class="channel-card">
                     <div class="card-thumb science">
                         <img src="5.png" alt="Vetenskap SVT24">
@@ -99,16 +93,15 @@
 
             </div>
         </section>
-        <section class="tv-tabla left">
+
+        <section class="tv-tabla">
             <h2>Tv-tablå</h2>
             <span class="material-symbols-outlined">chevron_left</span>
             <h3>IDAG</h3>
             <span class="material-symbols-outlined">chevron_right</span>
-            <Label for="date"></Label>
-            <input type="date" id="date" name="date"></INput>
+            <input type="date" id="date" name="date">
         </section>
 
-        <!--SVT1-->
         <section class="schedule svt1">
             <h3>SVT1</h3>
             <div class="program">
@@ -133,7 +126,7 @@
                 </div>
             </div>
         </section>
-        <!--SVT2-->
+
         <section class="schedule svt2">
             <h3>SVT2</h3>
             <div class="program">
@@ -158,25 +151,22 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="footer">
         <div class="footer-top">
-
             <div class="footer-top-logo">
                 <h1>svt</h1>
-                <p>Sverige Television AB</p>
+                <p>Sveriges Television AB</p>
             </div>
-
             <div class="footer-columns">
                 <div class="col">
-                    <a href="#"><i class="fa-solid fa-circle-dot"></i>SVT1</a>
+                    <a href="#"><i class="fa-solid fa-circle-dot"></i> SVT1</a>
                     <a href="#">Program</a>
                     <a href="#">Nyheter</a>
                 </div>
                 <div class="col">
-                    <a href="#"><i class="fa-solid fa-circle-dot"></i>SVT2</a>
+                    <a href="#"><i class="fa-solid fa-circle-dot"></i> SVT2</a>
                     <a href="#">Dokumentär</a>
                     <a href="#">Kultur</a>
                 </div>
@@ -184,13 +174,12 @@
         </div>
         <div class="footer-bottom">
             <p>svt.se | om SVT</p>
-
             <div class="footer-buttons">
-                <button><i class="fa-solid fa-gear">INSTÄLNINGAR</i></button>
-                <button><i class="fa-solid fa-envelope">KONTAKT</i></button>
+                <button><i class="fa-solid fa-gear"></i> INSTÄLLNINGAR</button>
+                <button><i class="fa-solid fa-envelope"></i> KONTAKT</button>
             </div>
         </div>
     </footer>
-</body>
 
+</body>
 </html>
