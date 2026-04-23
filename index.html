@@ -17,15 +17,32 @@
     <div>
         <!--SVT Header-->
         <header>
-            <button class="btn "><img width="135" height="65" src="Svtlogo.jpg" alt="Svtlogo"></button>
+            <!--Hmburger(visas bara på mobil)-->
+            <button class="hamburger" onclick="toggleMenu()">
+            <span class="material-symbols-outlined">menu</span></button>
+            <button class="btn logo-btn">
+            <img width="100" height="50" src="Svtlogo.jpg" alt="Svtlogo">
+            </button>
+            
+            <!--Nav-länkar(gömda på mobil)-->
+            <nav class="header-nav" id="headerNAV">
             <button class="btn ">START</button>
             <button class="btn ">MITT SVTPLAY</button>
             <button class="btn ">PROGRAM</button>
             <button class="btn ">KNALLER</button>
-            <button class="btn"><span class="material-symbols-outlined">search</span>SÖK</button>
-
-            <button class="btn right"><span class=" btn material-symbols-outlined right">person</span>LOGGA IN</button>
+        </nav>
+        
+        <div class="header-right">
+        <button class="btn"><span class="material-symbols-outlined">search</span>SÖK</button>
+        <button class="btn logga-in-text">
+                <span class="material-symbols-outlined">person</span> LOGGA IN
+        </button>
+        </div>
         </header>
+        <script>function toggleMenu(){
+            const nav = document.getElementById("headerNAV");
+            nav.classList.toggle("open");
+        }</script>
 
     </div>
 
