@@ -14,18 +14,34 @@
 </head>
 
 <body>
-    <div>
-        <!--SVT Header-->
-        <header>
-            <button class="btn "><img width="135" height="65" src="Svtlogo.jpg" alt="Svtlogo"></button>
+    <!--SVT Header-->
+    <header class="header">
+        <nav class="nav">
+            <a href="#">
+                <img src="svtlogo.png" alt="Svtlogo" width="135" height="65">
+            </a>
             <button class="btn ">START</button>
             <button class="btn ">MITT SVTPLAY</button>
-            <button class="btn ">PROGRAM</button>
             <button class="btn ">KNALLER</button>
-            <button class="btn"><span class="material-symbols-outlined">search</span>SÖK</button>
+            <button class="btn ">PROGRAM</button>
 
-            <button class="btn right"><span class=" btn material-symbols-outlined right">person</span>LOGGA IN</button>
-        </header>
+
+            <div class="nav-right">
+                <button class="btn" aria-label="Sök">
+                    <span class="material-symbols-outlined">search</span>
+                    SÖK
+                </button>
+
+                <button class="btn">
+                    <span class="material-symbols-outlined">person</span>
+                    LOGGA IN
+                </button>
+            </div>
+        </nav>
+
+    </header>
+
+
 
     </div>
 
@@ -66,8 +82,8 @@
                 <div class="channel-card">
                     <div class="card-thumb documentary">
                         <img src="4.png" alt="Dokumentär SVT2">
-                        <p class="card-channel">SVT2</p>
                     </div>
+                    <p class="card-channel">SVT2</p>
                     <p class="card-title">Dokumentär</p>
                 </div>
 
@@ -87,12 +103,12 @@
             <span class="material-symbols-outlined">chevron_left</span>
             <h3>IDAG</h3>
             <span class="material-symbols-outlined">chevron_right</span>
-            <Label for="date"></Label>
-            <input type="date" id="date" name="date"></INput>
+            <label for="date"></label>
+            <input type="date" id="date" name="date">
         </section>
 
         <!--SVT1-->
-        <section class="schedule svt1">
+        <section class="schedule">
             <h3>SVT1</h3>
             <div class="program">
                 <span class="time">18:00</span>
@@ -117,7 +133,7 @@
             </div>
         </section>
         <!--SVT2-->
-        <section class="schedule svt2">
+        <section class="schedule">
             <h3>SVT2</h3>
             <div class="program">
                 <span class="time">20:00</span>
